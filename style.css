@@ -29,12 +29,6 @@ main {
     justify-content: space-evenly;
 }
 
-/* Form status styles */
-#form-status {
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
 /* Header styles */
 h1 {
     color: white;
