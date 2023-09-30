@@ -2,46 +2,48 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Add this line for better box sizing */
+    box-sizing: border-box;
 }
 
 /* Body styles */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 50px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1.25rem; /* 20px */
 }
 
 /* Main container styles */
 main {
     display: flex;
-    width: 1200px;
-    border-radius: 10px;
-    height: 600px;
+    width: 100%;
+    max-width: 75rem; /* 1200px */
+    border-radius: 1rem; /* 10px */
+    height: 37.5rem; /* 600px */
     background-color: hsl(0, 100%, 74%);
     background-image: url("./images/bg-intro-desktop.png");
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 1.25rem; /* 20px */
 }
 
 /* Header styles */
 h1 {
     color: white;
     font-weight: 900;
-    width: 300px;
+    width: 18.75rem; /* 300px */
     text-align: center;
 }
 
 /* Form summary styles */
 .form-sum {
     color: white;
-    width: 350px;
-    padding-right: 20px;
+    max-width: 21.875rem; /* 350px */
+    padding-right: 1.25rem; /* 20px */
 }
 
 /* Form styles */
@@ -50,11 +52,12 @@ form {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 490px;
-    width: 400px;
-    margin: 20px auto;
-    border-radius: 20px;
+    height: 29.375rem; /* 470px */
+    max-width: 25rem; /* 400px */
+    margin: 1.25rem; /* 20px */
+    border-radius: 1.25rem; /* 20px */
     justify-content: space-evenly;
+    padding: 1.25rem; /* 20px */
 }
 
 /* Form section styles */
@@ -66,27 +69,27 @@ form {
 
 /* Input styles */
 input {
-    padding-left: 10px;
-    height: 45px;
-    border: 1px solid hsl(0, 100%, 74%);
-    border-radius: 5px;
-    width: 300px;
+    padding-left: 0.625rem; /* 10px */
+    height: 2.8125rem; /* 45px */
+    border: 0.0625rem solid hsl(0, 100%, 74%); /* 1px */
+    border-radius: 0.3125rem; /* 5px */
+    width: 18.75rem; /* 300px */
 }
 
 /* Buttons styles */
 .trail-btn, .claim-trail {
     color: white;
-    padding: 15px 70px;
-    border-radius: 10px;
+    padding: 0.9375rem 4.375rem; /* 15px 70px */
+    border-radius: 1.25rem; /* 10px */
     border: none;
 }
 
 /* Error message styles */
 .error-message {
-    font-size: 10px;
+    font-size: 0.625rem; /* 10px */
     align-self: flex-end;
     color: hsl(0, 100%, 74%);
-    margin-right: 50px;
+    margin-right: 3.125rem; /* 50px */
 }
 
 /* Trail button styles */
@@ -96,9 +99,9 @@ input {
 
 /* Claim trail button styles */
 .claim-trail {
-    padding: 10px 80px;
+    padding: 0.625rem 5rem; /* 10px 80px */
     background-color: hsl(154, 59%, 51%);
-    transition: background-color 0.3s; /* Add transition for a smoother hover effect */
+    transition: background-color 0.3s;
 }
 
 /* Hover effect for claim trail button */
@@ -109,7 +112,7 @@ input {
 
 /* Terms and services styles */
 .terms-services {
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
 }
 
 /* Span styles */
@@ -119,10 +122,46 @@ span {
 
 /* Attribution styles */
 .attribution {
-    font-size: 11px;
+    font-size: 0.6875rem; /* 11px */
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 780px) {
+    /* Adjust styles for tablets (780px) */
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    form {
+        height: 350px;
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 425px) {
+    main{
+        width: 100%;
+    }
+    .trail-btn{
+        height: 50px;
+        width: 80%;
+        padding: 0;
+    }
+    form{
+        width: 250px;
+    }
+    .claim-trail{
+        height: 45px;
+        padding: 0;
+        width: 200px;
+    }
+    input{
+        width: 14.75rem;
+    }
 }
